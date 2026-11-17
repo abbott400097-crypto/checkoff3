@@ -1,0 +1,22 @@
+Experiment 1: compression can shrink or expand data
+Four long runs          raw= 32 bytes  pairs=  4  encoded=  8 bytes  exact=yes
+  pairs: (8,0) (8,1) (8,2) (8,3)
+Alternating colors      raw= 32 bytes  pairs= 32  encoded= 64 bytes  exact=yes
+
+Experiment 2: same frequencies, different order
+Both contain value 0: 8 times; value 1: 8 times.
+0000000011111111        raw= 16 bytes  pairs=  2  encoded=  4 bytes  exact=yes
+  pairs: (8,0) (8,1)
+0101010101010101        raw= 16 bytes  pairs= 16  encoded= 32 bytes  exact=yes
+Total counts cannot distinguish these inputs. RLE preserves their order.
+
+Experiment 3: one count byte has a limit
+300 copies of 7         raw=300 bytes  pairs=  2  encoded=  4 bytes  exact=yes
+  pairs: (255,7) (45,7)
+One logical run splits into pairs (255,7) and (45,7).
+
+Experiment 4: the three presentation images
+Two color bands         raw=144 bytes  pairs=  2  encoded=  4 bytes  exact=yes
+  pairs: (72,1) (72,3)
+Pixel heart             raw=144 bytes  pairs= 19  encoded= 38 bytes  exact=yes
+Frequent color changes  raw=144 bytes  pairs=144  encoded=288 bytes  exact=yes
