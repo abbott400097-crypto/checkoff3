@@ -1,21 +1,29 @@
 # AI Conversation Record
 
 **Student:** Bingxi Li  
-**Assistant:** OpenAI Codex
+**AI tools:** OpenAI Codex for earlier preparation; ChatGPT for the shared follow-up.
 
 ## Share link
 
-**Pending: insert the actual accessible conversation permalink before submission.**
+[Shared conversation: 检查RLE理解与代码](https://chatgpt.com/share/6afbcff5-f2d4-83ea-89dd-146df174e947)
 
-This document does not substitute for the conversation permalink requested by
-the assignment. No share link has been invented. A local file path, a private
-editor URL, a presentation URL, and a GitHub repository URL are not automatically
-links to the AI conversation.
+The student supplied this link, and it was checked without signing in on
+November 16, 2026. It is a later RLE code-learning conversation, not the full
+earlier project-preparation conversation.
 
-If a separate RLE follow-up conversation is used, introduce it honestly as a
-continuation of earlier discussion. Add its actual share link here and identify
-which discussion it covers. Do not present a replay or a written script as the
-original exchange. Check that the intended reviewer can open the shared page.
+The visible snapshot contains an explanation of one-byte count/value fields,
+then questions and explanations about:
+
+- `src`, `n`, `dst`, and `capacity`, including why pointers need separate lengths;
+- `uint8_t`, `size_t`, and `const`;
+- why the encoder advances with `i += count`, traced using `AAABBBAA`;
+- the three `while` conditions and how short-circuit evaluation prevents an
+  out-of-bounds array read.
+
+The snapshot does not contain the earlier topic-selection, array-versus-hash-table,
+decoder, or program-running discussion. Those earlier excerpts are recorded below
+and are not presented as contents of this shared link. New messages added after
+this snapshot should not be assumed to appear in it.
 
 ## Excerpts from the existing conversation
 

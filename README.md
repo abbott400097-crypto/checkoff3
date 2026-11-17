@@ -13,7 +13,10 @@ Preparation status: Bingxi Li has personally run the program. The AI assistant
 also ran the recorded experiments and automated tests. The reflection is a
 draft for the student to review. The included slide draft
 is AI-generated reference material, not a claim of student-created final slides.
-The final presentation, video, and conversation share link remain to be added.
+The [shared RLE code-learning conversation](https://chatgpt.com/share/6afbcff5-f2d4-83ea-89dd-146df174e947)
+is attached and was checked without signing in. It covers a later follow-up,
+not the entire earlier preparation. The student-created final slides and video
+remain to be added.
 
 ## The idea
 
@@ -144,8 +147,8 @@ valid encoded or decoded result. The library does not allocate memory.
   Download and open it in a browser; GitHub's file view displays the HTML source.
 - [presentation/](presentation/): reference slide draft and delivery notes.
 - [REFLECTION.md](REFLECTION.md): the AI exploration reflection draft.
-- [AI-CONVERSATION.md](AI-CONVERSATION.md): actual question excerpts and the
-  place for the conversation share link.
+- [AI-CONVERSATION.md](AI-CONVERSATION.md): the conversation share link, its
+  coverage, and actual excerpts from the earlier discussion.
 - [REFERENCES.md](REFERENCES.md): course instructions and technical references.
 
 ## Attribution

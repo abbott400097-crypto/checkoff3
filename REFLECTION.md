@@ -2,9 +2,9 @@
 
 **Student:** Bingxi Li  
 **Course:** COMP211, Fall 2026  
-**AI tool:** OpenAI Codex  
+**AI tools:** OpenAI Codex and ChatGPT  
 **Status:** Draft for my review before submission.  
-**Conversation permalink:** See [AI-CONVERSATION.md](AI-CONVERSATION.md); the share link is not yet attached.
+**Conversation permalink:** [RLE code-learning follow-up](https://chatgpt.com/share/6afbcff5-f2d4-83ea-89dd-146df174e947). This is a later follow-up; [AI-CONVERSATION.md](AI-CONVERSATION.md) distinguishes its contents from earlier discussion.
 
 ## How I approached the topic
 
@@ -21,28 +21,26 @@ also questioned whether the proposed presentation had enough substance.
 
 ## Representative prompts
 
-These are excerpts from my actual Chinese messages, followed by English
-translations. They are not a reconstructed conversation.
+These three prompts are visible in the shared follow-up. They grew out of
+code-reading questions suggested during the earlier preparation; they are not
+claimed as independently devised prompts. The Chinese text is quoted, followed
+by an English explanation.
 
-1. **“先让我弄懂RLE，再告诉我每页怎么讲”**  
-   “First help me understand RLE, then tell me how to explain each slide.”  
-   I wanted to understand the mechanism before relying on an English script.
-   The explanation used a sequence of repeated values, its count-value pairs,
-   and the sequence reconstructed from those pairs.
+1. **“rle_encode 的四个参数 src、n、dst、capacity 分别传什么？为什么传数组地址后，还要另外传长度？uint8_t、size_t 和 const 在这里分别是什么意思？”**  
+   I asked what the four arguments receive and what the types mean. The response
+   separated input address/length from output address/capacity. It clarified that
+   a pointer does not carry the array length and that passing a capacity does not
+   allocate storage.
 
-2. **“这个跟211有啥关系”**  
-   “What does this have to do with COMP211?”  
-   This led to a concrete connection: a C program can scan a byte array, count
-   equal neighboring values, and write a new byte representation. The
-   discussion also separated selecting an approved topic from making the
-   connection clear to an audience.
+2. **“for (size_t i = 0; i < n;) 为什么没有 i++？为什么最后写 i += count？请列出每一轮的 i、count 和当前处理的数组元素。”**  
+   I asked for a trace of the loop rather than only a definition. In `AAABBBAA`,
+   the run starts are 0, 3, and 6, with counts 3, 3, and 2. Advancing by the count
+   skips the whole run just processed. Adding a separate `i++` would skip data.
 
-3. **“一般用数组吗 这种为什么不是HASHTABLE存”**  
-   “Do people usually use an array? Why not store this in a hash table?”  
-   The response distinguished ordered runs from total frequencies. A table
-   that says there are five As and two Bs cannot recover the order in
-   `AAABBAA`. The accompanying experiment compares two sequences with the
-   same frequencies but different run lengths.
+3. **“while (count < 255 && count < n - i && src[i + count] == src[i]) 的三个条件分别检查什么？src[i + count] 正在看哪个元素？读取它之前，哪个条件防止越界？”**  
+   I asked which condition makes the next read safe. The explanation showed how
+   `count < n - i` checks the remaining input and how `&&` stops before reading
+   beyond the array. The 255 limit separately protects the one-byte count format.
 
 ## How I engaged with the responses
 
@@ -59,7 +57,8 @@ project's recorded experiment results show that 32 bytes can become either
 a value into counts of 255 and 45. Running a program and understanding each
 line are different tasks, so I also wanted to examine how decoding works.
 
-I selected two code questions from the assistant's suggested list for further
+In the earlier discussion, outside the shared follow-up, I selected two code
+questions from the assistant's suggested list for further
 discussion: why the decoder advances by two and uses `memset`, and why it
 rejects odd-length input and zero counts. Each pair contains a count followed
 by a value, so advancing by two moves to the next pair. `memset` repeats the
@@ -80,7 +79,7 @@ asking AI for more polished presentation material. That would help me check
 whether I can reproduce the reasoning independently.
 
 AI helped draft this reflection and the reference slides as well as the code
-and explanations. I still need to review this reflection for accuracy, create
-my own final slides as the assignment requires, and attach the share link to
-the actual learning conversation.
+and explanations. I still need to review this reflection for accuracy and create
+my own final slides as the assignment requires. The attached link documents the
+later code-learning exchange; it does not claim to contain all earlier work.
 

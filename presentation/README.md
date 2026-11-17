@@ -1,6 +1,6 @@
 # Presentation Materials
 
-`rle-presentation-draft.pptx` is an editable six-slide **AI-generated reference
+`rle-presentation-draft.pptx` is an editable eight-slide **AI-generated reference
 draft**. It contains bilingual speaker notes. It is not the student's completed
 final slide submission.
 
@@ -9,14 +9,20 @@ from your own understanding, add them here, and use the same final deck for the
 recording and the live presentation. Do not label this reference deck as
 independently student-created work.
 
-The six-part explanation covers:
+The eight pages keep audience questions separate from their answers:
 
 1. The question: can the same pixels occupy fewer bytes?
-2. Encoding a row as count-value pairs.
-3. Decoding and exact reconstruction.
-4. A counterexample in which the payload doubles.
-5. Three 12 × 12 patterns with different encoded sizes.
-6. The role of long runs and the connection to C arrays.
+2. Question: how would you describe the pixel row? No encoded answer is shown.
+3. Reveal: four count-value pairs use 8 bytes instead of 32.
+4. Decoding and exact reconstruction.
+5. Question: will an alternating row become smaller, stay the same, or grow?
+6. Reveal: 32 pairs use 64 bytes; the payload doubles.
+7. Three 12 × 12 patterns with different encoded sizes.
+8. The role of long runs and the connection to C arrays.
+
+Pause for 5–10 seconds on pages 2 and 5, let the audience respond, then advance.
+The question titles do not disclose the answer. These two added pages are reveal
+steps, not additional topics. Rehearse the entire talk to keep it within 5–7 minutes.
 
 The repository adds two useful questions for discussion without requiring a
 longer main talk: why total frequencies are insufficient, and what happens
