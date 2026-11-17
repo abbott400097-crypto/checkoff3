@@ -11,10 +11,6 @@ format so that every size comparison can be checked.
 
 Preparation status: Bingxi Li has personally run the program. The AI assistant
 also ran the recorded experiments and automated tests.
-The [shared RLE code-learning conversation](https://chatgpt.com/share/6afbcff5-f2d4-83ea-89dd-146df174e947)
-is attached and was checked without signing in. It covers a later follow-up,
-not the entire earlier preparation. The student-created final slides and video
-remain to be added.
 
 ## The idea
 
@@ -148,12 +144,3 @@ valid encoded or decoded result. The library does not allocate memory.
 - [AI-CONVERSATION.md](AI-CONVERSATION.md): the conversation share link, its
   coverage, and actual excerpts from the earlier discussion.
 - [REFERENCES.md](REFERENCES.md): course instructions and technical references.
-
-## Attribution
-
-Bingxi Li is the student and intended presenter. OpenAI Codex assisted with
-explanations, code, test execution, documentation, and presentation drafts.
-Student ownership of this repository does not mean its contents were produced
-without AI assistance. The course requires student-created final slides; the
-reference deck must not be represented as independently student-created work.
-
