@@ -10,9 +10,7 @@ an interactive pixel demonstration. The project uses an explicit teaching
 format so that every size comparison can be checked.
 
 Preparation status: Bingxi Li has personally run the program. The AI assistant
-also ran the recorded experiments and automated tests. The reflection is a
-draft for the student to review. The included slide draft
-is AI-generated reference material, not a claim of student-created final slides.
+also ran the recorded experiments and automated tests.
 The [shared RLE code-learning conversation](https://chatgpt.com/share/6afbcff5-f2d4-83ea-89dd-146df174e947)
 is attached and was checked without signing in. It covers a later follow-up,
 not the entire earlier preparation. The student-created final slides and video
