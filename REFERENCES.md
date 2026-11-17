@@ -16,6 +16,13 @@
   A reference showing another concrete RLE encoding scheme. It should not be
   confused with this project's fixed count-value pair format.
 
+## Repeated sequences beyond RLE
+
+- [RFC 1951: DEFLATE Compressed Data Format Specification, section 3.2](https://www.rfc-editor.org/rfc/rfc1951.html).
+  The presentation's short LZ77 comparison uses its description of references to
+  earlier matching byte sequences. The repository only implements RLE. No LZ77
+  compression sizes or benchmark results are claimed.
+
 ## Experiments and AI assistance
 
 - Size results in the README come from the repository's own deterministic
